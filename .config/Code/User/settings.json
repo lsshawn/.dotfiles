@@ -1,0 +1,167 @@
+{
+    "editor.fontFamily": "Fira Code Retina, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 13,
+    "editor.lineHeight": 24,
+    "editor.fontLigatures": true,
+    "editor.lineNumbers": "relative",
+    "window.zoomLevel": 0,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "keyboard.dispatch": "keyCode",
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#888",
+        "editorRuler.foreground": "#252424"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
+    "git.enableSmartCommit": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
+    "[markdown]": {
+        "editor.fontFamily": "Fira Code Retina, monospace",
+        "editor.wordWrap": "on",
+        "editor.rulers": [],
+        "editor.quickSuggestions": false,
+        "editor.formatOnSave": false
+    },
+    "[plaintext]": {
+        "editor.fontFamily": "Fira Code Retina, monospace",
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[vue]": {
+        "editor.formatOnSave": false
+    },
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "markdown",
+            "autoFix": false
+        }
+    ],
+    "git.openDiffOnClick": false,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "yml"
+    ],
+    "cSpell.userWords": [
+        "Wistia",
+        "Youtube",
+        "coffee",
+        "com",
+        "gmail",
+        "lsshawn",
+        "nuxt",
+        "or",
+        "sshawn",
+        "tea",
+        "cupbots",
+        "vuetify"
+    ],
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "GitHub Plus",
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.rendererType": "dom",
+    "turboConsoleLog.quote": "'",
+    "vim.easymotion": true,
+    // "vim.easymotionMarkerHeight": 20,
+    "vim.easymotionMarkerFontFamily": "Fira Code Retina",
+    "vim.easymotionMarkerFontWeight": "700",
+    "vim.easymotionMarkerBackgroundColor": "#FFF400",
+    "vim.easymotionMarkerForegroundColorOneChar": "#333",
+    "vim.easymotionMarkerForegroundColorTwoChar": "#333",
+    "vim.easymotionMarkerWidthPerChar": 12,
+    "vim.easymotionMarkerFontSize": "12",
+    "vim.easymotionMarkerYOffset": 0,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "leader",
+                "b",
+                "d",
+                "w"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "%"
+            ],
+            "commands": [
+                {
+                    "command": "editor.emmet.action.matchTag"
+                }
+            ]
+        }
+    ],
+    "sync.gist": "d65ddc7440d0f05bcd9023b5f0e546b1"
+}

@@ -1,0 +1,4 @@
+[2019-10-24 17:01:59.476] [renderer1] [error] spawn xterm ENOENT: Error: spawn xterm ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:232:19)
+    at onErrorNT (internal/child_process.js:407:16)
+    at process._tickCallback (internal/process/next_tick.js:63:19)

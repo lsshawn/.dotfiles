@@ -1,0 +1,42 @@
+[2019-10-24 23:01:11.610] [exthost] [info] extension host started
+[2019-10-24 23:01:11.682] [exthost] [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv {"startup":false,"extensionId":{"value":"mechatroner.rainbow-csv","_lower":"mechatroner.rainbow-csv"},"activationEvent":"onLanguage:plaintext"}
+[2019-10-24 23:01:11.683] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/mechatroner.rainbow-csv-1.3.1/extension
+[2019-10-24 23:01:11.686] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2019-10-24 23:01:11.686] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-10-24 23:01:11.695] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2019-10-24 23:01:11.695] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-10-24 23:01:11.696] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2019-10-24 23:01:11.696] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/emmet/dist/extension
+[2019-10-24 23:01:11.702] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2019-10-24 23:01:11.702] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/git/dist/main
+[2019-10-24 23:01:11.711] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2019-10-24 23:01:11.711] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/merge-conflict/dist/extension
+[2019-10-24 23:01:11.712] [exthost] [info] ExtensionService#_doActivateExtension dariofuzinato.vue-peek {"startup":true,"extensionId":{"value":"dariofuzinato.vue-peek","_lower":"dariofuzinato.vue-peek"},"activationEvent":"*"}
+[2019-10-24 23:01:11.712] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/dariofuzinato.vue-peek-1.0.2/out/src/extension
+[2019-10-24 23:01:11.712] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"extensionId":{"value":"dbaeumer.vscode-eslint","_lower":"dbaeumer.vscode-eslint"},"activationEvent":"*"}
+[2019-10-24 23:01:11.712] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/dbaeumer.vscode-eslint-1.9.1/client/out/extension
+[2019-10-24 23:01:11.715] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"extensionId":{"value":"EditorConfig.EditorConfig","_lower":"editorconfig.editorconfig"},"activationEvent":"*"}
+[2019-10-24 23:01:11.715] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/editorconfig.editorconfig-0.14.2/out/editorConfigMain.js
+[2019-10-24 23:01:11.722] [exthost] [info] ExtensionService#_doActivateExtension Equinusocio.vsc-material-theme {"startup":true,"extensionId":{"value":"Equinusocio.vsc-material-theme","_lower":"equinusocio.vsc-material-theme"},"activationEvent":"*"}
+[2019-10-24 23:01:11.722] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/equinusocio.vsc-material-theme-30.0.0/out/src/material.theme.config
+[2019-10-24 23:01:11.725] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.sublime-keybindings {"startup":true,"extensionId":{"value":"ms-vscode.sublime-keybindings","_lower":"ms-vscode.sublime-keybindings"},"activationEvent":"*"}
+[2019-10-24 23:01:11.725] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/ms-vscode.sublime-keybindings-4.0.3/out/extension
+[2019-10-24 23:01:11.728] [exthost] [info] ExtensionService#_doActivateExtension rafaelmaiolla.remote-vscode {"startup":true,"extensionId":{"value":"rafaelmaiolla.remote-vscode","_lower":"rafaelmaiolla.remote-vscode"},"activationEvent":"*"}
+[2019-10-24 23:01:11.728] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/rafaelmaiolla.remote-vscode-1.1.0/out/src/extension
+[2019-10-24 23:01:11.744] [exthost] [info] ExtensionService#_doActivateExtension Shan.code-settings-sync {"startup":true,"extensionId":{"value":"Shan.code-settings-sync","_lower":"shan.code-settings-sync"},"activationEvent":"*"}
+[2019-10-24 23:01:11.744] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/shan.code-settings-sync-3.4.3/out/extension.js
+[2019-10-24 23:01:11.777] [exthost] [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker {"startup":true,"extensionId":{"value":"streetsidesoftware.code-spell-checker","_lower":"streetsidesoftware.code-spell-checker"},"activationEvent":"*"}
+[2019-10-24 23:01:11.777] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/streetsidesoftware.code-spell-checker-1.7.18/dist/extension
+[2019-10-24 23:01:11.785] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"extensionId":{"value":"vscode-icons-team.vscode-icons","_lower":"vscode-icons-team.vscode-icons"},"activationEvent":"*"}
+[2019-10-24 23:01:11.785] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/vscode-icons-team.vscode-icons-9.5.0/dist/src/vscode-icons.bundle.js
+[2019-10-24 23:01:11.798] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"extensionId":{"value":"vscodevim.vim","_lower":"vscodevim.vim"},"activationEvent":"*"}
+[2019-10-24 23:01:11.798] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/vscodevim.vim-1.11.2/out/extension
+[2019-10-24 23:01:11.826] [exthost] [info] ExtensionService#_doActivateExtension WallabyJs.quokka-vscode {"startup":true,"extensionId":{"value":"WallabyJs.quokka-vscode","_lower":"wallabyjs.quokka-vscode"},"activationEvent":"*"}
+[2019-10-24 23:01:11.826] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ss/.vscode/extensions/wallabyjs.quokka-vscode-1.0.257/index
+[2019-10-24 23:01:11.828] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":true,"extensionId":{"value":"vscode.npm","_lower":"vscode.npm"},"activationEvent":"workspaceContains:package.json"}
+[2019-10-24 23:01:11.828] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/npm/dist/main
+[2019-10-24 23:01:12.010] [exthost] [info] eager extensions activated
+[2019-10-24 23:01:14.307] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:jsonc"}
+[2019-10-24 23:01:14.307] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/configuration-editing/dist/extension
+[2019-10-24 23:01:14.310] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2019-10-24 23:01:14.310] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/json-language-features/client/dist/jsonMain
