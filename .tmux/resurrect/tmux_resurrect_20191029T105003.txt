@@ -1,0 +1,11 @@
+pane	0	1	:cupbots	0	:	1	:/home/ss/projects/cupbots-api	0	nvim	:nvim .
+pane	0	1	:cupbots	0	:	2	:/home/ss/projects/cupbots-api	1	zsh	:
+pane	0	1	:cupbots	0	:	3	:/home/ss/projects/cupbots-api	0	zsh	:
+pane	0	1	:cupbots	0	:	4	:/home/ss/projects/chatui	0	zsh	:
+pane	0	2	:utils	1	:*	1	:/home/ss	0	zsh	:
+pane	0	2	:utils	1	:*	2	:/home/ss/projects/sshawn/content/journal	1	bash	:/bin/bash /home/ss/scripts/daily-journal
+pane	0	3	:background	0	:-	1	:/home/ss	1	redis-server	:redis-server *:6379
+window	0	1	0	:	5d84,174x45,0,0[174x31,0,0,1,174x13,0,32{59x13,0,32,2,56x13,60,32,3,57x13,117,32,4}]
+window	0	2	1	:*	5e1c,174x45,0,0{87x45,0,0,5,86x45,88,0,6}
+window	0	3	0	:-	c244,174x45,0,0,7
+state	0	

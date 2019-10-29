@@ -104,11 +104,6 @@ let s:denite_options = {'default' : {
 \ 'source_names': 'short',
 \ 'prompt': 'λ:',
 \ 'statusline': 0,
-\ 'highlight_matched_char': 'WildMenu',
-\ 'highlight_matched_range': 'Visual',
-\ 'highlight_window_background': 'Visual',
-\ 'highlight_filter_background': 'StatusLine',
-\ 'highlight_prompt': 'StatusLine',
 \ 'winrow': 1,
 \ 'vertical_preview': 1
 \ }}
@@ -492,3 +487,9 @@ nnoremap <leader>ucl :g/console.log("TCL:/s@^\s*// @@<CR>
 
 " show function name
 map <leader>_F ma[[k"xyy`a:echo @x<CR>
+
+" javascript folding
+set foldmethod=syntax "syntax highlighting items specify folds
+set foldcolumn=1 "defines 1 col at window left, to indicate folding
+let javaScript_fold=1 "activate folding by JS syntax
+set foldlevelstart=99 "start file with all folds opened:
