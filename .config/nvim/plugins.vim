@@ -30,8 +30,21 @@ Plug 'rstacruz/vim-closer'
 " Improved motion in Vim
 Plug 'easymotion/vim-easymotion'
 
+" Vim surround
+Plug 'tpope/vim-surround'
+
 " Intellisense Engine
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+let g:coc_global_extensions = [
+      \'coc-json',
+      \'coc-tsserver',
+      \'coc-html',
+      \'coc-vetur',
+      \'coc-prettier',
+      \'coc-python',
+      \'coc-emmet',
+      \'coc-css'
+\]
 
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
@@ -97,6 +110,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'pondrejk/vim-readability'
 Plug 'reedes/vim-pencil'
+
+" Interactive scratchpad (Quokka in Vscode)
+Plug 'metakirby5/codi.vim'
 
 " Initialize plugin system
 call plug#end()

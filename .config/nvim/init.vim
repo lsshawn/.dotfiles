@@ -47,7 +47,7 @@ set cmdheight=1
 
 " Don't give completion messages like 'match 1 of 2'
 " or 'The only match'
-set shortmess+=c
+set shortmess+=f
 
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
@@ -251,16 +251,16 @@ let g:airline_theme='gruvbox'
 
 " Add custom highlights in method that is executed every time a colorscheme is sourced
 " See https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f for details
-function! MyHighlights() abort
-  " Hightlight trailing whitespace
-  highlight Trail ctermbg=red guibg=red
-  call matchadd('Trail', '\s\+$', 100)
-endfunction
+" function! MyHighlights() abort
+  " " Hightlight trailing whitespace
+  " highlight Trail ctermbg=red guibg=red
+  " call matchadd('Trail', '\s\+$', 100)
+" endfunction
 
-augroup MyColors
-  autocmd!
-  autocmd ColorScheme * call MyHighlights()
-augroup END
+" augroup MyColors
+  " autocmd!
+  " autocmd ColorScheme * call MyHighlights()
+" augroup END
 
 " Change vertical split character to be a space (essentially hide it)
 set fillchars+=vert:.
@@ -320,6 +320,10 @@ endfunction
 " ============================================================================ "
 " ===                             KEY MAPPINGS                             === "
 " ============================================================================ "
+
+" === Show matched strings at the center of the screen === "
+nnoremap n nzz
+nnoremap N Nzz
 
 " === Denite shorcuts === "
 "   ;         - Browser currently open buffers
@@ -407,9 +411,10 @@ vnoremap <leader>p "_dP
 nnoremap <leader>rv :source $NVIMINIT<CR>
 nnoremap <leader>ev :tabnew $NVIMINIT<CR>
 
-" Toggle comment VScode shortcut
+" Ctrl / to toggle comment (VScode shortcut)
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+let g:NERDSpaceDelims = 1
 
 set clipboard=unnamedplus
 
@@ -476,8 +481,23 @@ autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 let g:vim_markdown_folding_disabled = 1
 
+" ========================== "
+" === javascript folding === "
+" ========================== "
+
+" set foldmethod=syntax "syntax highlighting items specify folds
+set foldmethod=indent
+" set foldcolumn=1 "defines 1 col at window left, to indicate folding
+let javaScript_fold=1 "activate folding by JS syntax
+set foldlevelstart=99 "start file with all folds opened:
+
+
+" ===================== "
+" === Uncategorized === "
+" ===================== "
+
 " makeshift turbo console log
-nnoremap <silent> <buffer> <leader>cl :silent put=['console.log(\"TCL: <C-r><C-w>\", <C-r><C-w>);']<CR>-2==+
+nnoremap <silent> <buffer> <leader>cl :silent put=['console.log(\"TCL: <C-r><C-w>\", <C-r><C-w>)']<CR>-2==+
 " delete TCL logs
 nnoremap <leader>dcl :g/console.log("TCL:/d<CR>
 " comment TCL logs
@@ -488,8 +508,18 @@ nnoremap <leader>ucl :g/console.log("TCL:/s@^\s*// @@<CR>
 " show function name
 map <leader>_F ma[[k"xyy`a:echo @x<CR>
 
-" javascript folding
-set foldmethod=syntax "syntax highlighting items specify folds
-set foldcolumn=1 "defines 1 col at window left, to indicate folding
-let javaScript_fold=1 "activate folding by JS syntax
-set foldlevelstart=99 "start file with all folds opened:
+" ===================================== "
+" === Save/Load views automatically === "
+" ===================================== "
+" https://vim.fandom.com/wiki/Make_views_automatic
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave ?* mkview | filetype detect
+    autocmd BufWinEnter ?* silent! loadview | filetype detect
+augroup END
+
+" ======================= "
+" === Persistent undo === "
+" ======================= "
+
+set undodir=~/.config/nvim/undodir
