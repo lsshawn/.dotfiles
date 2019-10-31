@@ -187,11 +187,6 @@ function countdown(){
    aplay /usr/share/sounds/deepin/stereo/complete-copy.wav
 }
 
+# https://github.com/numberoverzero/brainfm
+export BRAINFM_SID="s%3ABkirvTS3y2vpW4IF4IZLbG4k9rzA858B.gxGA6TTs2lRYmBjyxRKBClgDTSgc%2BKT9uSYo40SsiX8"
 
-# dotfiles backup
-echo 'alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"' \
-    >> "$HOME/.zshrc"
-alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"

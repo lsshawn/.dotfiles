@@ -2,8 +2,8 @@
     "telemetry.machineId": "faeee6f9bc508df680da6a7165c101c694bb9d2f3e6f93230b3d8afcc6576867",
     "openedPathsList": {
         "workspaces3": [
-            "file:///home/ss/projects/sshawn",
             "file:///home/ss/projects/cupbots-api",
+            "file:///home/ss/projects/sshawn",
             "file:///home/ss/projects/chatui",
             "file:///home/ss/projects/starter-for-nuxt-markdown-blog",
             "file:///home/ss/projects/test-nuxt-vuetify",
@@ -17,7 +17,10 @@
             "file:///home/ss/projects/botium-bindings/samples/fbdirect",
             "file:///home/ss/projects/botium-bindings"
         ],
-        "files2": []
+        "files2": [
+            "file:///home/ss/projects/sshawn/content/notes/momenttz.js",
+            "file:///home/ss/projects/cupbots-api/helpers/scheduler.js"
+        ]
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -62,24 +65,24 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/ss/projects/sshawn",
-                                        "external": "file:///home/ss/projects/sshawn",
-                                        "path": "/home/ss/projects/sshawn",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/projects/sshawn"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
+                                        "fsPath": "/home/ss/projects/cupbots-api",
                                         "external": "file:///home/ss/projects/cupbots-api",
                                         "path": "/home/ss/projects/cupbots-api",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/projects/cupbots-api"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/ss/projects/sshawn",
+                                        "path": "/home/ss/projects/sshawn",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/projects/sshawn"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -173,6 +176,31 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/ss/projects/sshawn/content/notes/momenttz.js",
+                                        "path": "/home/ss/projects/sshawn/content/notes/momenttz.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/projects/sshawn/content/notes/momenttz.js"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/ss/projects/cupbots-api/helpers/scheduler.js",
+                                        "path": "/home/ss/projects/cupbots-api/helpers/scheduler.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/projects/cupbots-api/helpers/scheduler.js"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.action.openRecent",
                                     "label": "&&More..."
                                 },
@@ -202,13 +230,11 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save",
-                        "enabled": false
+                        "label": "&&Save"
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "workbench.action.files.saveAll",
@@ -487,7 +513,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "Show &&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -665,8 +692,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1471,8 +1497,8 @@
     "themeBackground": "#ffffff",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/ss/projects/sshawn",
-            "backupPath": "/home/ss/.config/Code/Backups/cd984dfb6e64c56a18fc927c34ca4ce3",
+            "folder": "file:///home/ss/projects/cupbots-api",
+            "backupPath": "/home/ss/.config/Code/Backups/124ec17014693aa41544c58d97db1868",
             "uiState": {
                 "mode": 0,
                 "x": 0,
@@ -1483,5 +1509,5 @@
         },
         "openedWindows": []
     },
-    "pickerWorkingDir": "/home/ss/projects"
+    "pickerWorkingDir": "/home/ss/projects/sshawn/content/notes"
 }

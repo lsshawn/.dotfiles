@@ -1,8 +1,0 @@
-[2019-10-25 02:12:40.733] [sharedprocess] [info] main {"machineId":"faeee6f9bc508df680da6a7165c101c694bb9d2f3e6f93230b3d8afcc6576867","windowId":2}
-[2019-10-25 02:13:20.740] [sharedprocess] [info] Starting to clean up unused language packs.
-[2019-10-25 10:22:29.756] [sharedprocess] [info] Installing extension: wallabyjs.quokka-vscode
-[2019-10-25 10:22:30.555] [sharedprocess] [info] Downloaded extension: wallabyjs.quokka-vscode /tmp/4eda7704-2bca-4c34-8d11-fe33193fbf7e
-[2019-10-25 10:22:41.294] [sharedprocess] [info] Extracted extension to /home/ss/.vscode/extensions/.wallabyjs.quokka-vscode-1.0.258: wallabyjs.quokka-vscode
-[2019-10-25 10:22:41.295] [sharedprocess] [info] Renamed to /home/ss/.vscode/extensions/wallabyjs.quokka-vscode-1.0.258
-[2019-10-25 10:22:41.299] [sharedprocess] [info] Installation completed. wallabyjs.quokka-vscode
-[2019-10-25 10:22:41.316] [sharedprocess] [info] Extensions installed successfully: wallabyjs.quokka-vscode

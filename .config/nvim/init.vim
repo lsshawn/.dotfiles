@@ -321,6 +321,10 @@ endfunction
 " ===                             KEY MAPPINGS                             === "
 " ============================================================================ "
 
+" === Search & replace word under cursor === "
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+
 " === Show matched strings at the center of the screen === "
 nnoremap n nzz
 nnoremap N Nzz
@@ -492,12 +496,25 @@ let javaScript_fold=1 "activate folding by JS syntax
 set foldlevelstart=99 "start file with all folds opened:
 
 
-" ===================== "
-" === Uncategorized === "
-" ===================== "
+" ========================= "
+" === Turbo Console Log === "
+" ========================= "
 
-" makeshift turbo console log
-nnoremap <silent> <buffer> <leader>cl :silent put=['console.log(\"TCL: <C-r><C-w>\", <C-r><C-w>)']<CR>-2==+
+function! TurboLog() abort
+  let l:word = expand('<cword>')
+  " TODO: use regex to find function name. 2 possible ways:
+  " 1. const funcName = () => {
+  " 2. function funcName() {
+  let l:funcName = getline(search('\v^[[:alpha:]$_]', "bn", 1, 100))
+  let l:str = "console.log(\"TCL: "
+  let l:str = l:str . l:funcName . ' -> ' . l:word . ' ", ' . l:word
+  let l:str = l:str . ")"
+
+  call append('.', l:str)
+endfunction
+
+nnoremap <silent> <buffer> <leader>cl :call TurboLog()<CR>
+
 " delete TCL logs
 nnoremap <leader>dcl :g/console.log("TCL:/d<CR>
 " comment TCL logs
@@ -505,17 +522,16 @@ nnoremap <leader>ccl :g/console.log("TCL:/norm I// <CR>
 " uncomment TCL logs
 nnoremap <leader>ucl :g/console.log("TCL:/s@^\s*// @@<CR>
 
-" show function name
-map <leader>_F ma[[k"xyy`a:echo @x<CR>
-
 " ===================================== "
 " === Save/Load views automatically === "
 " ===================================== "
 " https://vim.fandom.com/wiki/Make_views_automatic
 augroup remember_folds
     autocmd!
-    autocmd BufWinLeave ?* mkview | filetype detect
-    autocmd BufWinEnter ?* silent! loadview | filetype detect
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
+    " autocmd BufWinLeave ?* mkview | filetype detect
+    " autocmd BufWinEnter ?* silent! loadview | filetype detect
 augroup END
 
 " ======================= "
