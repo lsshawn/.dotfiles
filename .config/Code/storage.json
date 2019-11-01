@@ -230,11 +230,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAll",
@@ -499,8 +501,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar",
-                                    "checked": true
+                                    "label": "Show &&Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -1500,11 +1501,11 @@
             "folder": "file:///home/ss/projects/cupbots-api",
             "backupPath": "/home/ss/.config/Code/Backups/124ec17014693aa41544c58d97db1868",
             "uiState": {
-                "mode": 0,
+                "mode": 1,
                 "x": 0,
-                "y": 30,
+                "y": 27,
                 "width": 1477,
-                "height": 801
+                "height": 804
             }
         },
         "openedWindows": []

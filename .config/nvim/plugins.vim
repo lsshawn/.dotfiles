@@ -43,7 +43,8 @@ let g:coc_global_extensions = [
       \'coc-prettier',
       \'coc-python',
       \'coc-emmet',
-      \'coc-css'
+      \'coc-css',
+      \'coc-python'
 \]
 
 " Tmux/Neovim movement integration
@@ -111,8 +112,15 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pondrejk/vim-readability'
 Plug 'reedes/vim-pencil'
 
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " Interactive scratchpad (Quokka in Vscode)
 Plug 'metakirby5/codi.vim'
+
+" === Python workflow === "
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
 " Initialize plugin system
 call plug#end()

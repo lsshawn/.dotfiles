@@ -1,4 +1,17 @@
 {
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "editor.tabCompletion": "on",
+    "search.showLineNumbers": true,
+    // custom title bar
+    "window.titleBarStyle": "custom",
+    "window.nativeTabs": false,
+    "workbench.editor.showTabs": false,
+    "workbench.editor.labelFormat": "short",
+    "editor.cursorBlinking": "smooth",
+    "terminal.explorerKind": "external",
+    "editor.insertSpaces": true,
+    "editor.parameterHints.enabled": false,
     "editor.fontFamily": "Fira Code Retina, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 13,
     "editor.lineHeight": 24,
@@ -163,5 +176,6 @@
             ]
         }
     ],
-    "sync.gist": "d65ddc7440d0f05bcd9023b5f0e546b1"
+    "sync.gist": "d65ddc7440d0f05bcd9023b5f0e546b1",
+    "terminal.integrated.shell.linux": "/bin/zsh"
 }

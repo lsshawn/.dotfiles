@@ -49,6 +49,15 @@ set cmdheight=1
 " or 'The only match'
 set shortmess+=f
 
+" Relative in normal mode, absolute in insert mode.
+set number relativenumber
+  
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END 
+
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
 " ============================================================================ "
@@ -138,6 +147,7 @@ inoremap <silent><expr> <TAB>
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " === NeoSnippet === "
+
 " Map <C-k> as shortcut to activate snippet if available
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -166,7 +176,8 @@ let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir
 " Wrap in try/catch to avoid errors on initial install before plugin is available
 try
 
-" === Vim airline ==== "
+" === Vim airline === "
+
 " Enable extensions
 let g:airline_extensions = ['branch', 'hunks', 'coc']
 
@@ -215,6 +226,7 @@ catch
 endtry
 
 " === echodoc === "
+
 " Enable echodoc on startup
 let g:echodoc#enable_at_startup = 1
 
@@ -231,6 +243,26 @@ let g:used_javascript_libs = 'underscore,requirejs,chai,jquery'
 
 " === Signify === "
 let g:signify_sign_delete = '-'
+
+" === vim-slime === "
+
+" always use tmux
+let g:slime_target = 'tmux'
+
+" fix paste issues in ipython
+let g:slime_python_ipython = 1
+
+" always send text to the top-right pane in the current tmux tab without asking
+let g:slime_default_config = {
+            \ 'socket_name': get(split($TMUX, ','), 0),
+            \ 'target_pane': '{top-right}' }
+let g:slime_dont_ask_default = 1
+
+" === vim-ipython-cell === "
+
+" Use '##' to define cells instead of using marks
+let g:ipython_cell_delimit_cells_by = 'tags'
+
 
 " ============================================================================ "
 " ===                                UI                                    === "
@@ -321,8 +353,11 @@ endfunction
 " ===                             KEY MAPPINGS                             === "
 " ============================================================================ "
 
+" === Preview Markdown === "
+nmap <C-p> <Plug>MarkdownPreviewToggle
+
 " === Search & replace word under cursor === "
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+:nnoremap <Leader>S :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 
 " === Show matched strings at the center of the screen === "
@@ -345,14 +380,14 @@ nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
 "   <CR>          - Open currently selected file in any mode
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
-  imap <silent><buffer> <C-o>
-  \ <Plug>(denite_filter_quit)
-  inoremap <silent><buffer><expr> <Esc>
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> <Esc>
-  \ denite#do_map('quit')
-  inoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
+imap <silent><buffer> <C-o>
+\ <Plug>(denite_filter_quit)
+inoremap <silent><buffer><expr> <Esc>
+\ denite#do_map('quit')
+nnoremap <silent><buffer><expr> <Esc>
+\ denite#do_map('quit')
+inoremap <silent><buffer><expr> <CR>
+\ denite#do_map('do_action')
 endfunction
 
 " Define mappings while in denite window
@@ -363,20 +398,20 @@ endfunction
 "   <C-o> or i  - Switch to insert mode inside of filter prompt
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> <Esc>
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <C-o>
-  \ denite#do_map('open_filter_buffer')
+nnoremap <silent><buffer><expr> <CR>
+\ denite#do_map('do_action')
+nnoremap <silent><buffer><expr> q
+\ denite#do_map('quit')
+nnoremap <silent><buffer><expr> <Esc>
+\ denite#do_map('quit')
+nnoremap <silent><buffer><expr> d
+\ denite#do_map('do_action', 'delete')
+nnoremap <silent><buffer><expr> p
+\ denite#do_map('do_action', 'preview')
+nnoremap <silent><buffer><expr> i
+\ denite#do_map('open_filter_buffer')
+nnoremap <silent><buffer><expr> <C-o>
+\ denite#do_map('open_filter_buffer')
 endfunction
 
 " === Nerdtree shorcuts === "
@@ -390,9 +425,7 @@ nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>y :StripWhitespace<CR>
 
 " === Search shorcuts === "
-"   <leader>h - Find and replace
 "   <leader>/ - Claer highlighted search terms while preserving history
-map <leader>h :%s///<left><left>
 nmap <silent> <leader>/ :nohlsearch<CR>
 
 " === Easy-motion shortcuts ==="
@@ -433,14 +466,40 @@ nnoremap tl :tablast<CR>
 inoremap jj <Esc>
 cnoremap jj <Esc>
 
-" Relative in normal mode, absolute in insert mode.
-set number relativenumber
-  
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END 
+"""""""""""""""""""""""""""""""""
+" ===       Python          === "
+"""""""""""""""""""""""""""""""""
+
+" vim-ipython-cell
+
+" map <Leader>r to run script
+autocmd FileType python nnoremap <buffer> <Leader>i :IPythonCellRun<CR>
+
+" map <Leader>R to run script and time the execution
+autocmd FileType python nnoremap <buffer> <Leader>I :IPythonCellRunTime<CR>
+
+" map <Leader>c to execute the current cell
+autocmd FileType python nnoremap <buffer> <Leader>c :IPythonCellExecuteCell<CR>
+
+" map <Leader>C to execute the current cell and jump to the next cell
+autocmd FileType python nnoremap <buffer> <Leader>C :IPythonCellExecuteCellJump<CR>
+
+" map <Leader>l to clear IPython screen
+autocmd FileType python nnoremap <buffer> <Leader>l :IPythonCellClear<CR>
+
+" map <Leader>x to close all Matplotlib figure windows
+autocmd FileType python nnoremap <buffer> <Leader>x :IPythonCellClose<CR>
+
+" map [c and ]c to jump to the previous and next cell header
+autocmd FileType python nnoremap <buffer> [c :IPythonCellPrevCell<CR>
+autocmd FileType python nnoremap <buffer> ]c :IPythonCellNextCell<CR>
+
+" map <Leader>h to send the current line or current selection to IPython
+let g:slime_no_mappings = 1
+autocmd FileType python nnoremap <buffer> <Leader>h <Plug>SlimeSendCurrentLine
+autocmd FileType python xnoremap <buffer> <Leader>h <Plug>SlimeRegionSend
+
+" TODO: look at this git for sample of bindings but in PyShell https://github.com/greghor/vimux-ds-workflow/blob/master/src/.vimrc
 
 " ============================================================================ "
 " ===                                 MISC.                                === "
