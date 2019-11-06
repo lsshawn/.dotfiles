@@ -2,6 +2,7 @@
     "telemetry.machineId": "faeee6f9bc508df680da6a7165c101c694bb9d2f3e6f93230b3d8afcc6576867",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/ss/projects/cupbots4-web",
             "file:///home/ss/projects/cupbots-api",
             "file:///home/ss/projects/sshawn",
             "file:///home/ss/projects/chatui",
@@ -1503,12 +1504,12 @@
             "uiState": {
                 "mode": 1,
                 "x": 0,
-                "y": 27,
-                "width": 1477,
-                "height": 804
+                "y": 33,
+                "width": 1476,
+                "height": 797
             }
         },
         "openedWindows": []
     },
-    "pickerWorkingDir": "/home/ss/projects/sshawn/content/notes"
+    "pickerWorkingDir": "/home/ss/projects"
 }

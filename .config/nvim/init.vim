@@ -43,6 +43,11 @@ set noruler
 " Only one line for command line
 set cmdheight=1
 
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+
+
 " === Completion Settings === "
 
 " Don't give completion messages like 'match 1 of 2'
@@ -132,16 +137,19 @@ catch
 endtry
 
 " === Coc.nvim === "
-" use <tab> for trigger completion and navigate to next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
 "Close preview window when completion is done.
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -158,6 +166,9 @@ let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 
 " Hide conceal markers
 let g:neosnippet#enable_conceal_markers = 0
+
+" SuperTab like snippets behavior.
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " === NERDTree === "
 " Show hidden files/directories
@@ -348,6 +359,27 @@ function! Handle_Win_Enter()
     setlocal winhighlight=Normal:MarkdownError
   endif
 endfunction
+
+" === vim-ledger === "
+" number of columns to fold text
+let g:ledger_maxwidth = 80
+
+" string between account name and amount
+let g:ledger_fillstring = '    -'
+
+" account completion by depth
+let g:ledger_detailed_first = 1
+
+" run :LedgerSort to order and format new transactions
+" from https://justyn.io/blog/automatically-sort-and-align-ledger-transactions-in-vim/
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
+let g:ledger_maxwidth = 120
+let g:ledger_fold_blanks = 1
+function LedgerSort()
+    :%! ledger -f - print --sort 'date, amount'
+    :%LedgerAlign
+endfunction
+command LedgerSort call LedgerSort()
 
 " ============================================================================ "
 " ===                             KEY MAPPINGS                             === "

@@ -42,6 +42,8 @@ let g:coc_global_extensions = [
       \'coc-vetur',
       \'coc-prettier',
       \'coc-python',
+      \'coc-eslint',
+      \'coc-tslint',
       \'coc-emmet',
       \'coc-css',
       \'coc-python'
@@ -118,9 +120,16 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " Interactive scratchpad (Quokka in Vscode)
 Plug 'metakirby5/codi.vim'
 
+" Vim-ledger
+Plug 'ledger/vim-ledger'
+Plug 'nathangrigg/vim-beancount'
+
 " === Python workflow === "
 Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+
+" === Replacement for grep === "
+Plug 'mileszs/ack.vim'
 
 " Initialize plugin system
 call plug#end()

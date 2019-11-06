@@ -1,11 +1,27 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx", ".vue"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "Markdown",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    ".vue"
+  ],
   "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•",
+  // Require .prettierrc
+  "prettier.requireConfig": true,
+  // Tslint on save
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
   "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": false,
   "prettier.disableLanguages": []
