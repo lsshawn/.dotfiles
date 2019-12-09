@@ -1,3 +1,4 @@
 .dotfiles
 ~/.config/nvim/undodir/
 ~/.config/coc/extensions/
+~/.config/zsh/custom/plugins/
